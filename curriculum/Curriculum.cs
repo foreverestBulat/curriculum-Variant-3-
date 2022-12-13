@@ -28,13 +28,6 @@ namespace curriculum
             ListCourses = new List<Course>();
         }
 
-        //public Curriculum()
-        //{
-        //    ListDegree = new List<Degree>();
-        //    ListCourses = new List<Course>();
-        //    Init();
-        //}
-
         public void AddNewCourse(int code, string title, bool isSpecial, int lectureHours,
             int practiseHours, bool hasExam, bool hasCoursePaper, List<int> prerequisities)
         {
@@ -60,8 +53,6 @@ namespace curriculum
             foreach (Course course in ListCourses)
                 Console.WriteLine(course.ToString());
         }
-
-        //определять допустимость составленной программы по описанным выше правилам
 
         public bool LaborIntensityOfCourse(List<int> numbers, int countCredit, int countSpecialCourse)
         {
@@ -93,20 +84,6 @@ namespace curriculum
             }
             Console.WriteLine("Не хватает кол-ва спецкурсов");
             return false;
-
-            
-
-            //foreach(Course course in ListCourses)
-            //{
-            //    lecH += course.LectureHours;
-            //    pracH += course.PractiseHours;
-            //    if (course.HasExam) c++;
-            //    if (course.HasCoursePaper) c += 2;
-            //}
-
-            //c += (int)(lecH + pracH * 1.25) / 18;
-
-            //return c;
         }
 
         public void Init()
@@ -311,6 +288,5 @@ namespace curriculum
             foreach(var degree in ListDegree)
                 Console.WriteLine(degree.ToString());
         }
-
     }
 }
