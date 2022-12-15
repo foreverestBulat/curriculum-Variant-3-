@@ -2,7 +2,7 @@
 using System.Collections;
 
 Curriculum curriculum = new Curriculum();
-curriculum.Init();
+//curriculum.Init();
 
 while (true)
 {
@@ -35,10 +35,11 @@ while (true)
             curriculum.PrintDegrees();
             int code = int.Parse(Console.ReadLine());
 
-            curriculum.Student = student;
-            curriculum.DegreeCode = code;
-            curriculum.Code = regNumber;
-            curriculum.CreationDate = DateTime.Now;
+            curriculum = new Curriculum(student, code, regNumber, DateTime.Now);
+            //curriculum.Student = student;
+            //curriculum.DegreeCode = code;
+            //curriculum.Code = regNumber;
+            //curriculum.CreationDate = DateTime.Now;
 
 
             Console.WriteLine("Выберите какие курсы вы хотите изучить(вводите номера курсов через пробел): ");
@@ -102,5 +103,3 @@ while (true)
             return ;
     }
 }
-
-//Curriculum curriculum1 = new Curriculum();
